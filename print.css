@@ -1,0 +1,1211 @@
+@charset "UTF-8";
+body {
+  font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0; }
+
+.pf-sprite {
+  /* Since CS also uses this css file via print.scss, we ned to keep the images
+   * out of asset pipeline. This image is served in development from rails app
+   * and from CDN in production */
+  background: url("https://cdn.printfriendly.com/assets/client/pf-app-sprite-v2.png") no-repeat; }
+
+.pf-button {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  margin: 0;
+  cursor: pointer;
+  color: #6D9F00;
+  text-shadow: 1px 1px 0px #fff;
+  /* FF3.5+, Opera 9+, Saf1+, Chrome */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 1em 1.5em;
+  text-align: center;
+  /* Borders and Radius */
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border-top: 1px solid #c7c7c7;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #959595;
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.15));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.25)));
+  /*-webkit-gradient(linear, top, right top, (rgba(0, 0, 0, .0)) , (rgba(255, 255, 255, .15)));*/
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.15));
+  /* mozilla example - FF3.6+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, StartColorStr=#26FFFFFF, EndColorStr=#26000000);
+  /* IE 5.5 - 7 */
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, StartColorStr=#26000000, EndColorStr=#26FFFFFF);
+  /* IE8 uses -ms-filter for whatever reason... */ }
+
+.pf-button:hover {
+  color: #587710;
+  background-color: #fafafa; }
+
+.pfcom-site .pfbtn {
+  background-color: #337ab7;
+  border-color: #204D74;
+  border-radius: 4px;
+  padding: 10px 16px;
+  cursor: pointer;
+  text-shadow: none;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1em; }
+
+.pfcom-site .pfbtn-large {
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 6px; }
+
+.pfcom-site .pfbtn:hover, .pfcom-site .pfbtn:focus, .pfcom-site .pfbtn:active, .pfcom-site .pfbtn.active, .open .dropdown-toggle.pfcom-site .pfbtn {
+  color: #ffffff;
+  background-color: #286090;
+  border-color: #204D74; }
+
+.pfcom-site .pfbtn:active, .pfcom-site .pfbtn.active, .open .dropdown-toggle.pfcom-site .pfbtn {
+  background-image: none; }
+
+.pfcom-site .pfbtn.disabled, .pfcom-site .pfbtn[disabled], fieldset[disabled] .pfcom-site .pfbtn, .pfcom-site .pfbtn.disabled:hover, .pfcom-site .pfbtn[disabled]:hover, fieldset[disabled] .pfcom-site .pfbtn:hover, .pfcom-site .pfbtn.disabled:focus, .pfcom-site .pfbtn[disabled]:focus, fieldset[disabled] .pfcom-site .pfbtn:focus, .pfcom-site .pfbtn.disabled:active, .pfcom-site .pfbtn[disabled]:active, fieldset[disabled] .pfcom-site .pfbtn:active, .pfcom-site .pfbtn.disabled.active, .pfcom-site .pfbtn[disabled].active, fieldset[disabled] .pfcom-site .pfbtn.active {
+  background-color: #337ab7;
+  border-color: #204D74; }
+
+.pfcom-site .pfbtn .badge {
+  color: #337ab7;
+  background-color: #ffffff; }
+
+.pfcom-site .pfbtn-success {
+  color: #ffffff;
+  background-color: #39b54a;
+  border-color: #33A242; }
+
+.pfcom-site .pfbtn-success:hover, .pfcom-site .pfbtn-success:focus, .pfcom-site .pfbtn-success:active, .pfcom-site .pfbtn-success.active, .open .dropdown-toggle.pfcom-site .pfbtn-success {
+  color: #ffffff;
+  background-color: #2D8E3A;
+  border-color: #33A242; }
+
+.pfcom-site .pfbtn-success:active, .pfcom-site .pfbtn-success.active, .open .dropdown-toggle.pfcom-site .pfbtn-success {
+  background-image: none; }
+
+.pfcom-site .pfbtn-success.disabled, .pfcom-site .pfbtn-success[disabled], fieldset[disabled] .pfcom-site .pfbtn-success, .pfcom-site .pfbtn-success.disabled:hover, .pfcom-site .pfbtn-success[disabled]:hover, fieldset[disabled] .pfcom-site .pfbtn-success:hover, .pfcom-site .pfbtn-success.disabled:focus, .pfcom-site .pfbtn-success[disabled]:focus, fieldset[disabled] .pfcom-site .pfbtn-success:focus, .pfcom-site .pfbtn-success.disabled:active, .pfcom-site .pfbtn-success[disabled]:active, fieldset[disabled] .pfcom-site .pfbtn-success:active, .pfcom-site .pfbtn-success.disabled.active, .pfcom-site .pfbtn-success[disabled].active, fieldset[disabled] .pfcom-site .pfbtn-success.active {
+  background-color: #5CB85C;
+  border-color: #33A242; }
+
+.pfcom-site .pfbtn-success .badge {
+  color: #5CB85C;
+  background-color: #ffffff; }
+
+.btn-wider {
+  padding-left: 40px;
+  padding-right: 40px; }
+
+.border {
+  border: 1px solid black; }
+
+.margin-top-sm {
+  margin-top: 10px; }
+
+.margin-top-md {
+  margin-top: 15px; }
+
+.margin-top-lg {
+  margin-top: 20px; }
+
+.margin-top-xl {
+  margin-top: 40px; }
+
+.margin-left-sm {
+  margin-top: 10px; }
+
+.margin-left-md {
+  margin-top: 15px; }
+
+.margin-left-lg {
+  margin-top: 20px; }
+
+.margin-left-xl {
+  margin-top: 40px; }
+
+.mobile, .tablet {
+  display: none; }
+
+.desktop.inline {
+  display: inline; }
+
+.desktop.block {
+  display: block; }
+
+body.pfcom-site {
+  background: asset-url("site/bg-page.png") 0px 70px repeat-x #F5ECE1;
+  font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333; }
+
+.pfcom-site a {
+  color: #337ab7;
+  text-decoration: none; }
+
+nav#pfcom-masthead {
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: #382615;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 12px; }
+
+.pfcom-site .nav-wrapper {
+  max-width: 860px;
+  min-width: 650px;
+  margin: 0 auto; }
+
+.pfcom-site .printfriendly-logo {
+  padding: 0;
+  position: relative;
+  left: -18px; }
+
+.pfcom-site nav a {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #24190e;
+  padding: 10px 8px;
+  margin: 0px;
+  color: #fff; }
+
+.pfcom-site nav a:hover {
+  background-color: #372514; }
+
+.pfcom-site nav a:hover {
+  color: #61d1d5; }
+
+.pfcom-site nav .nav-message {
+  float: right;
+  line-height: 70px; }
+
+.pfcom-site .banner {
+  margin: auto;
+  width: 728px; }
+
+#browser-extension-message-wrapper {
+  display: none; }
+
+footer.pf-com-footer {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 14px; }
+
+footer.pf-com-footer a {
+  color: #337ab7;
+  text-decoration: none;
+  padding: 6px 12px; }
+
+footer.pf-com-footer ul {
+  list-style: none;
+  margin: auto; }
+
+footer.pf-com-footer li {
+  display: inline-block; }
+
+body.source-referral footer.pf-com-footer {
+  margin-top: -3%; }
+
+body.source-referral footer.pf-com-footer a.pf-link {
+  display: none; }
+
+body.source-referral footer.pf-com-footer a {
+  color: white;
+  float: right; }
+
+@Charset "utf-8";
+.source-referral #pf-app {
+  margin: 36px auto; }
+
+#pf-app {
+  width: expression( document.body.clientWidth > 778 ? "777px" : "auto" );
+  /* sets max-width for IE */
+  width: expression( document.body.clientWidth < 726 ? "725" : "auto" );
+  /* set min-width for IE */
+  max-width: 860px;
+  min-width: 320px;
+  margin: 2px auto;
+  background: none !important;
+  position: relative;
+  min-height: 70%;
+  font-size: 13px; }
+
+.pf-app form {
+  margin: 0;
+  padding: 0; }
+
+#pf-app a, #pf-app input, #pf-app select {
+  outline: none; }
+
+.pf-app a {
+  color: #404040;
+  text-shadow: 0 0 2px #fff;
+  /* FF3.5+, Opera 9+, Saf1+, Chrome */
+  cursor: pointer;
+  text-decoration: none; }
+
+#pf-app .pf-toolbar label:hover, .pf-app a:hover {
+  color: #000; }
+
+/* @group Toolbar */
+.pf-toolbar {
+  height: 49px;
+  width: 100%;
+  overflow: hidden;
+  /* Borders and Radius */
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  border-top: 1px solid #c7c7c7;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #959595;
+  /* Gradient Background */
+  background: #fafafa;
+  background-image: -webkit-gradient(linear, right bottom, right top, color-stop(0, rgba(0, 0, 0, 0.15)), color-stop(1, rgba(255, 255, 255, 0.15)));
+  /* mozilla example - FF3.6+ */
+  background-image: -moz-linear-gradient(right bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%);
+  /* IE 5.5 - 7 */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, StartColorStr=#26FFFFFF, EndColorStr=#26000000);
+  /* IE8 uses -ms-filter for whatever reason... */
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, StartColorStr=#26000000, EndColorStr=#26FFFFFF);
+  background-color: #f8f8f8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#e8e8e8));
+  background-image: -webkit-linear-gradient(top, #f8f8f8, #e8e8e8);
+  background-image: -moz-linear-gradient(top, #f8f8f8, #e8e8e8);
+  background-image: -ms-linear-gradient(top, #f8f8f8, #e8e8e8);
+  background-image: -o-linear-gradient(top, #f8f8f8, #e8e8e8);
+  background-image: linear-gradient(top, #f8f8f8, #e8e8e8);
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#26FFFFFF, EndColorStr=#26000000); }
+
+.pf-toolbar li, .pf-toolbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 49px;
+  float: left; }
+
+.pf-toolbar .pf-options {
+  float: none;
+  text-align: center;
+  font-size: 12px;
+  overflow: hidden; }
+
+.pf-toolbar .pf-options ul {
+  display: inline-block;
+  float: none; }
+
+.pf-toolbar a:hover, .pf-toolbar label:hover {
+  background-color: #e5e4e4;
+  background-color: rgba(0, 0, 0, 0.05);
+  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#11000000,endColorstr=#11000000);
+  /* IE */ }
+
+.pf-toolbar a, .pf-toolbar label {
+  display: inline-block;
+  margin: 0;
+  height: 43px;
+  line-height: 43px;
+  padding: 4px 18px 0;
+  cursor: pointer;
+  color: #404040;
+  text-shadow: 0 0 2px #fff;
+  /* FF3.5+, Opera 9+, Saf1+, Chrome */ }
+
+.pf-toolbar select {
+  margin-right: 6px; }
+
+.pf-toolbar .pf-sprite {
+  float: left;
+  margin-right: 4px;
+  height: 36px;
+  margin-top: 4px; }
+
+#w-print {
+  border-right: 1px solid #ccc;
+  font-weight: bold; }
+
+#w-print .pf-sprite {
+  background-position: 0 2px;
+  width: 33px; }
+
+#w-pdf {
+  font-variant: small-caps;
+  border-left: 1px solid #fafafa;
+  border-right: 1px solid #ccc;
+  font-weight: bold; }
+
+#w-pdf .pf-sprite {
+  background-position: -50px 3px;
+  width: 26px; }
+
+#w-email {
+  border-left: 1px solid #fafafa;
+  border-right: 1px solid #ccc;
+  font-weight: bold; }
+
+#w-email .pf-sprite {
+  background-position: -100px 2px;
+  width: 30px; }
+
+#w-undo .pf-sprite {
+  background-position: -150px -1px;
+  width: 20px; }
+
+#imagesize {
+  max-width: 120px; }
+
+#pf-app-close {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  height: 39px;
+  width: 36px;
+  text-indent: -9999px;
+  padding: 4px; }
+
+#pf-app-close .pf-sprite {
+  background-position: -201px -6px;
+  width: 19px;
+  height: 19px;
+  display: block;
+  float: right; }
+
+#pf-app-close span.pf-sprite:hover {
+  background-position: -221px -6px; }
+
+#pf-hamburger {
+  display: none;
+  /*width: 32px;*/
+  /*height: 32px;*/ }
+
+#pf-hamburger .pf-sprite {
+  background-position: 0 -114px;
+  width: 32px;
+  height: 32px;
+  margin-top: 6px; }
+
+#pf-menu {
+  float: none;
+  background-color: #75a131;
+  opacity: 0;
+  position: absolute;
+  left: 129px;
+  top: 51px;
+  transition: visibility 0s, opacity 0.25s ease-in-out;
+  visibility: hidden;
+  width: 250px;
+  z-index: 2147483638; }
+
+#pf-menu.pf-menu-open {
+  visibility: visible;
+  opacity: 1; }
+
+#pf-menu ul {
+  width: 100%;
+  height: auto; }
+
+#pf-menu li {
+  background-color: #75a131;
+  color: #fff;
+  height: 60px;
+  line-height: 60px;
+  list-style: none;
+  width: 100%; }
+
+#pf-menu li:first-child {
+  height: 65px;
+  line-height: 65px;
+  padding-left: 15px;
+  box-sizing: border-box; }
+
+#pf-menu li:not(:last-child) {
+  border-bottom: 1px solid #9fbe6f; }
+
+#pf-menu li .right {
+  float: right;
+  height: 60px;
+  line-height: 60px;
+  margin-right: 10px; }
+
+#pf-menu li button {
+  background-color: #5d8415;
+  border-radius: 4px;
+  border: 1px solid #9fbe6f;
+  color: #fff;
+  font-size: 15px;
+  height: 40px;
+  width: 70px;
+  vertical-align: middle; }
+
+#pf-menu li button:disabled {
+  background-color: #6D755D;
+  color: #000;
+  border-color: #AAA; }
+
+#pf-menu li button#menu-text-sm {
+  font-size: 11px; }
+
+#pf-menu li button#menu-text-lg {
+  font-size: 16px; }
+
+#pf-menu li label {
+  color: #fff;
+  display: block;
+  font-weight: normal;
+  height: 60px;
+  line-height: 60px;
+  margin: 0;
+  padding: 0;
+  text-indent: 15px;
+  text-shadow: none;
+  width: 250px; }
+
+#pf-menu li a {
+  color: #fff;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  margin: 0;
+  padding: 0;
+  text-indent: 15px;
+  text-shadow: none;
+  width: 250px; }
+
+#pf-menu li input[type=checkbox] {
+  float: right;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 20px 0 0; }
+
+#pf-menu .pf-menu-undo {
+  padding-top: 10px; }
+
+#pf-menu .pf-menu-undo .pf-sprite {
+  background-position: -32px -114px;
+  width: 32px;
+  height: 32px; }
+
+#pf-menu .pf-menu-logo {
+  display: block;
+  background-position: 0 -146px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+.pf-branding {
+  display: none; }
+
+#pf-menu-footer {
+  background-color: #372515;
+  text-align: center; }
+
+#pf-menu-footer .pf-menu-footer-btn {
+  margin: 0 4px 9px;
+  padding: 0;
+  width: 110px;
+  height: 24px;
+  line-height: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #e6e6e6;
+  text-shadow: none; }
+
+/* @end */
+#pf-dialog {
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 1;
+  top: 72px;
+ /* Don't change this to display:none
+* Taboola doesn't work in FF when it is hidden
+* via display:none. So we use the left: -9000
+*/
+  left: -9000px;
+  margin-left: -380px;
+  width: 760px;
+  padding: 8px;
+  /*background-color: #ddd;*/
+  background-color: rgba(87, 68, 47, 0.075);
+  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr= '#1357442F',EndColorStr='#1357442F');
+  /* IE6–IE9 */ }
+
+.pf-dialog {
+  /* BOX Styles */
+  -moz-box-shadow: 1px 1px 2px #aaa;
+  -webkit-box-shadow: 1px 1px 2px #888;
+  box-shadow: 1px 1px 2px #888;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #fff; }
+
+.pf-dialog-head {
+  padding: 24px 32px;
+  position: relative;
+  background-color: #e2e2e2;
+  zoom: 1;
+  /*ie relative position background image fix*/
+  min-height: 75px; }
+
+.pf-dialog-head h2 {
+  font-size: 26px;
+  margin: 0; }
+
+.pf-dialog p {
+  margin: 10px 0 0; }
+
+#dialog-text a {
+  text-decoration: underline; }
+
+#pf-d-close-wrap {
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  padding: 14px; }
+
+#dialog-close {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px; }
+
+#pf-d-close-wrap .pf-sprite {
+  background-position: -241px -9px;
+  height: 13px;
+  width: 13px;
+  display: inline-block;
+  vertical-align: middle; }
+
+#pf-dialog-print {
+  display: none; }
+
+#pf-dialog-print .pf-sprite {
+  background-position: 0 -50px;
+  width: 64px;
+  height: 64px;
+  float: left;
+  margin: -8px 18px 0 0;
+  display: inline-block; }
+
+/* @group Content Hilight */
+.hilight {
+  background-color: #f9ffb5;
+  cursor: pointer;
+  position: relative; }
+
+.hilight:before {
+  position: absolute;
+  display: block;
+  top: -28px;
+  font-family: arial, sans-serif;
+  padding: 8px 17px 6px;
+  height: 14px;
+  content: "click to delete";
+  background-color: #f9ffb5;
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap; }
+
+#pf-pdf-frame {
+  height: 68px; }
+
+#pn-loading .spinner {
+  max-width: 500px;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  height: 50px;
+  width: 100px;
+  background: #fff url("https://cdn.printfriendly.com/assets/client/ajax-loader.gif") no-repeat center; }
+
+#pn-loading small {
+  font-size: 12px;
+  color: #979797; }
+
+#pn-loading h2 {
+  font-size: 18px; }
+
+/* Footer */
+#pf-ft a {
+  font-size: 12px;
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  float: right;
+  padding: 6px 5px 0 0;
+  text-shadow: none; }
+
+#pf-ft a:hover {
+  color: #fff; }
+
+#pf-app-close {
+  display: none; }
+
+.source-referral .hide-for-referral {
+  display: none !important; }
+
+.source-referral #pf-app-close {
+  display: inline-block; }
+
+body.print-page-body.source-referral {
+  background: #444444; }
+
+#pf-dialog-ads {
+  box-sizing: border-box;
+  width: 100%; }
+
+.pfcom-message-wrapper {
+  position: relative;
+  z-index: 1002000;
+  text-align: center;
+  top: 80px;
+  display: none; }
+
+.pfcom-message {
+  display: inline-block;
+  max-width: 500px;
+  min-height: 120px;
+  padding: 3em;
+  margin: 0 auto;
+  text-align: left;
+  /* BOX Styles */
+  background: #fff;
+  -moz-box-shadow: 2px 2px 4px #888;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #a3cb84; }
+
+#report-error .heading {
+  border-top: 1px solid #CCC;
+  padding-top: 0.5em;
+  margin: 1em; }
+
+#report-error label {
+  display: block;
+  margin: 0.75em 0; }
+
+#report-error input[type=email], textarea {
+  width: 300px;
+  margin: 0.5em 50px 0 0;
+  padding: 0.25em;
+  background-color: #fefedd;
+  font-size: 16px;
+  display: block; }
+
+#report-error textarea {
+  width: 100%; }
+
+#report-error input[type=submit] {
+  margin-top: 1em; }
+
+.error {
+  color: #990000; }
+
+.pfcom-message h2 {
+  text-align: center;
+  color: #45331e;
+  margin: 0 0 1em; }
+
+.wait-container {
+  position: relative; }
+
+/* Tablet view */
+@media only screen and (max-width: 860px) {
+  .source-referral #pf-app {
+    margin: 0 auto; } }
+@media only screen and (max-width: 760px) {
+  #pf-hamburger {
+    display: inline-block; }
+
+  #pf-dialog {
+    margin-left: 0;
+    padding: 0;
+    width: 100%; }
+
+  #pf-dialog-print {
+    padding: 50px 10px 5px; }
+
+  #pf-dialog-print .pf-sprite {
+    margin-right: 10px; }
+
+  .pf-dialog-head h2 {
+    font-size: 23px; }
+
+  .pf-toolbar {
+    border-radius: 0; }
+
+  .pf-options {
+    display: none; }
+
+  #pf-d-close-wrap {
+    padding: 0; }
+
+  #pf-app-close .pf-sprite {
+    margin-right: 6px;
+    margin-top: 10px; } }
+/* Not engugh space for two ads */
+@media only screen and (max-width: 670px) {
+  #pf-dialog-ads {
+    width: 320px;
+    margin: 0 auto; } }
+/* Mobile view */
+@media only screen and (max-width: 480px) {
+  #pf-menu {
+    left: 0; }
+
+  /* Remove text from toolbar buttons */
+  .pf-toolbar #w-email span, .pf-toolbar #w-pdf span, .pf-toolbar #w-print span {
+    display: none; }
+
+  .pf-toolbar .pf-sprite {
+    margin-left: auto;
+    margin-right: auto; } }
+/* @group Utilities & Layout */
+@Charset "utf-8";
+#pf-content {
+  clear: both; }
+
+.direction-rtl #pf-content, .direction-rtl #pf-title {
+  direction: rtl; }
+
+.pf-hidden {
+  /* This is used when user clicks remove images */
+  display: none !important; }
+
+.hidden {
+  /* hide content hidden by the original sites */
+  display: none; }
+
+.no-print, .print-no {
+  display: none; }
+
+#pf-body input {
+  visibility: hidden; }
+
+#pf-body hr {
+  clear: both;
+  /*helps keep images with intended content*/ }
+
+/* HTML tag center is obsolete and will be deprecated.
+ * We do not need the effect of center tag in pf content and
+ * have disabled it via CSS */
+#pf-body center {
+  margin: 0 !important;
+  text-align: inherit !important; }
+
+.pf-9 {
+  font-size: 70%; }
+
+.pf-10 {
+  font-size: 80%; }
+
+.pf-11 {
+  font-size: 90%; }
+
+.pf-12 {
+  font-size: 100%; }
+
+.pf-13 {
+  font-size: 110%; }
+
+.pf-14 {
+  font-size: 120%; }
+
+.pf-15 {
+  font-size: 130%; }
+
+#pf-body, .pdf-body {
+  font-family: Arial, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-size: 14px;
+  border-left: 1px solid #888;
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #888;
+  border-top: 1px solid #dedede;
+  background-color: #ffffff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: auto;
+  padding: 24px;
+  cursor: default;
+  text-rendering: optimizelegibility;
+  zoom: 1 !important;
+  color: #080000;
+  line-height: 1.36; }
+
+/* @end */
+/*  @group layout  */
+/* @group Header */
+#pf-cust-header {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #222; }
+
+#pf-body #pf-header-img {
+  max-height: 200px;
+  max-width: 794px;
+  margin: 0 auto 24px;
+  display: block;
+  height: expression(this.height >= this.width && this.height > 200 ? 200 : true);
+  width: expression(this.height < this.width && this.width > 794 ? 794 : true);
+  float: none;
+  /*hack because  custom styles should resolve later */ }
+
+#pf-tagline {
+  text-align: center;
+  /* padding-bottom: 12px;*/
+  margin: 8px 0;
+  color: #b0b0b0;
+  /*border-bottom:1px solid #ddd;*/
+  font-size: 12px; }
+
+#pf-body #pf-title {
+  font-size: 175%;
+  margin: 0 0 6px;
+  color: #333; }
+
+#pf-src {
+  height: auto;
+  width: auto;
+  border-top: 1px solid #666;
+  /*overflow: auto;*/
+  color: #356da9;
+  padding-top: 6px;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 24px; }
+
+#pf-body img#pf-src-icon {
+  vertical-align: bottom;
+  cursor: default;
+  margin: 0;
+  /*only needed because css not specified to content. See if you can fix. */
+  max-height: 16px;
+  max-width: 16px;
+  margin-right: 3px;
+  border-style: none; }
+
+#pf-body a#pf-src-url, #pf-body a#pf-src-url:visited {
+  word-wrap: break-word;
+  text-decoration: none;
+  cursor: default;
+  color: #bbb; }
+
+#pf-body a#pf-src-url strong, #pf-body a#pf-src-url:visited strong {
+  color: #666666;
+  font-weight: bold;
+  margin-right: 2px; }
+
+#pf_author {
+  font-size: 0.85em;
+  color: gray;
+  display: block;
+  margin: -1em 0 1em;
+  float: left; }
+
+#pf-date {
+  font-size: 0.85em;
+  color: gray;
+  display: block;
+  margin: -1em 0 1em;
+  float: right; }
+
+/* @end */
+#pf-body h1 {
+  font-size: 140%;
+  margin: 1em 0 0.67em;
+  clear: both;
+  /*helps keep images with intended content*/ }
+
+#pf-body h2 {
+  font-size: 125%;
+  margin: 1em 0 0.67em; }
+
+#pf-body h3, #pf-body h4, #pf-body h5 {
+  font-size: 115%; }
+
+#pf-body a, #pf-body a:visited {
+  color: #026ad9;
+  word-wrap: break-word;
+  text-decoration: none; }
+
+#pf-content .mediumImage, #pf-content div.alignright, #pf-content div.pull-right, #pf-content img.alignright, #pf-content img.pull-right {
+  float: right;
+  clear: right;
+  border: none;
+  margin: 1em 0 1em 1.5em;
+  page-break-inside: avoid;
+  max-width: 100%; }
+
+#pf-content div.align-left, #pf-content div.pull-left, #pf-content img.alignleft, #pf-content img.pull-left {
+  float: left;
+  clear: left;
+  border: none;
+  margin: 1em 1.5em 1em 0em;
+  page-break-inside: avoid;
+  max-width: 100%; }
+
+#pf-content .smallImage, #pf-content div.alignnone, #pf-content img.alignnone {
+  float: none;
+  border: none;
+  margin: 0 0.25em;
+  display: inline; }
+
+#pf-content .blockImage, #pf-content div.aligncenter, #pf-content div.blockImage, #pf-content img.aligncenter, #pf-content img.block {
+  clear: both;
+  float: none;
+  page-break-inside: avoid;
+  display: block;
+  margin: 1.5em auto;
+  max-width: 100%; }
+
+#pf-body ol, #pf-body ul {
+  list-style-position: outside !important;
+  /*!important to support wkhtmltopdf */
+  margin: 1em 0 1em 1em;
+  padding: 0 1em; }
+
+#pf-body li {
+  margin: 0.5em 0; }
+
+#pf-body li img {
+  float: none;
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+  /* prevents list items from being indented from floated images with margin.*/ }
+
+#pf-body pre {
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ }
+
+/*general*/
+#pf-body .pf-caption {
+  /*margin:1.2em 0 1em 1em;*/
+  margin: 0.5em 1.5em;
+  padding: 8px 8px 16px;
+  float: right;
+  clear: both;
+  background-color: #f9f9f9;
+  border: 1px solid #B1A79B;
+  border-radius: 3px;
+  color: #838383;
+  font-size: 70%;
+  page-break-inside: avoid;
+  vertical-align: top;
+  max-width: 98%;
+  /*needs to be less than 100% in case image is 100%*/ }
+
+/*
+ * wkhtmltopdf 0.12.x version is very very slow when border-radius is set
+ * and when the document contains many captions
+ * https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1994
+ * https://github.com/wkhtmltopdf/wkhtmltopdf/issues/1510
+ * https://groups.google.com/forum/#!topic/wkhtmltopdf-general/IZCgzfT7FBI
+ * TODO: check the performance for v0.13
+ */
+#pf-body.pdf-body .pf-caption {
+  border-radius: 0; }
+
+/*general*/
+#pf-body .pf-caption img {
+  margin: 0 0 8px;
+  float: none; }
+
+#pf-body .wp-caption-text, #pf-body .tr-caption , #pf-body .caption-text {
+  margin: 0;
+  text-align: center; }
+
+#pf-body blockquote {
+  margin: 2.5em;
+  padding: 0 0.75em;
+  border-left: 2px solid #ccc;
+  font-style: italic;
+  color: #666; }
+
+#pf-body td, #pf-body th {
+  width: auto !important;
+  padding: 0.5em; }
+
+#pf-body table {
+  font-size: 1em;
+  /*Chrome has default font size of medium for tables*/
+  margin: 1em 0;
+  border-collapse: collapse;
+  border: none;
+  table-layout: auto;
+  width: auto !important;
+  /*Overrides local style in case author sets width greater than print area*/
+  /*page-break-inside:avoid;*/
+  /*tables with long unbreaking text string */
+  /*table-layout: fixed;
+  word-wrap: break-word;
+  width: 100%;*/ }
+
+#pf-body th {
+  font-weight: bold;
+  vertical-align: bottom; }
+
+#pf-body th[scope=row] {
+  vertical-align: top; }
+
+#pf-body tr {
+  page-break-inside: avoid;
+  border-bottom: 1px solid #ddd; }
+
+#pf-body td {
+  vertical-align: top; }
+
+#pf-body tfoot {
+  font-style: italic; }
+
+#pf-body code, #pf-body pre {
+  font: 1em "lucida console", "Courier New", monospace, Monaco, Courier, monospace;
+  display: inline-block;
+  text-align: left;
+  color: #d4420d; }
+
+.pf-size-full {
+  max-width: 100% !important; }
+
+.pf-size-large {
+  max-width: 75% !important; }
+
+.pf-size-medium {
+  max-width: 50% !important; }
+
+.pf-size-small {
+  max-width: 25% !important; }
+
+.pf-size-remove {
+  display: none !important; }
+
+/* @group Content Hilight */
+.hilight {
+  background-color: #f9ffb5;
+  cursor: pointer;
+  position: relative; }
+
+.hilight:before {
+  position: absolute;
+  display: block;
+  top: -28px;
+  font-family: arial, sans-serif;
+  padding: 8px 17px 6px;
+  height: 14px;
+  content: "click to delete";
+  background-color: #f9ffb5;
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap; }
+
+#pf-body .print-footer {
+  display: block;
+  margin: 1em auto 0; }
+
+/* @end */
+@media print {
+  body.pfcom-site {
+    background: none; }
+
+  @page {
+    margin: 18mm 9mm 3mm; }
+  #pf-app {
+    width: auto;
+    max-width: none;
+    min-width: initial;
+    margin: 0; }
+
+  #pf-body.browser {
+    margin: 0 !important;
+    padding: 0 !important; }
+
+  #pf-body {
+    padding: 0 5px 0 0 !important;
+    /*wkhtmltopdf bug - Fixes the missing text on right margin*/
+    margin: 0 !important;
+    border: none !important;
+    background-color: none !important; }
+
+  #browser-extension-message, #pf-dialog, #pfcom-footer-wrapper, #pfcom-masthead, #pnLightbox, .hilight:before, .pf-com-footer, .pf-toolbar, .pfcom-site .banner, .hilight:before, .pfcom-message-wrapper, .pfcom-message-wrapper {
+    display: none !important; }
+
+  #pf-mask, .hilight {
+    background: transparent !important;
+    background-color: transparent !important; }
+
+  .page-break-before {
+    page-break-before: always; }
+
+  .page-break-after {
+    page-break-after: always; } }
+#pf-dialog-ads {
+  height: 320px;
+  display: block;
+  background: #fff;
+  padding: 20px; }
+
+#pf-dialog-ads .a-box {
+  float: left; }
+
+#pf-dialog-ads .a-box-right {
+  float: right; }
+
+#pf-dialog-ads .lijit {
+  width: 100%;
+  height: 250px;
+  border: none; }
+
+.cs-core-iframe #pf-app {
+  margin: 36px auto;
+  text-align: left; }
+.cs-core-iframe #algo-iframe {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: white;
+  border-left: 1px solid #888;
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #888; }
+.cs-core-iframe #pf-app-close {
+  display: block; }
+.cs-core-iframe .pf-dialog-head {
+  min-height: 100px; }
+.cs-core-iframe #pf-dialog-ads {
+  display: none; }
+.cs-core-iframe #pf-ft {
+  display: none; }
+
+#pf-body.cs-algo-iframe {
+  border: none; }
+
+@media only screen and (max-width: 860px) {
+  .cs-core-iframe #pf-app {
+    margin: 0 auto; } }
